@@ -1,0 +1,164 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f4f4f4; /* Light gray background */
+}
+
+/* Header Styles */
+header {
+    background-color: #a0d6f1; /* Soft light blue */
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Banner Styles */
+.banner {
+    text-align: center;
+    background-color: #e0f2f1; /* Very light teal */
+    color: #333;
+    padding: 1rem 0;
+}
+
+.banner img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+/* Departments Container Styles */
+#alldepartments {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.depts {
+    flex: 1 1 calc(33.333% - 1rem); /* 3 items per row */
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.depts:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover */
+}
+
+.depts h3 {
+    margin: 0;
+    padding: 1rem;
+    color: #333;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    font-size: 1.1rem;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+}
+
+.depts::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    opacity: 0.4; /* Reduced opacity for a subtle effect */
+}
+
+/* Pagination Styles */
+#page {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+#page button {
+    background-color: #b3cde0; /* Soft pastel blue */
+    border: 1px solid #b3cde0;
+    color: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    font-size: 1rem;
+}
+
+#page button:hover {
+    background-color: #9ab6c2; /* Slightly darker blue */
+    color: #fff;
+    border-color: #9ab6c2;
+}
+
+#page button:disabled {
+    background-color: #e0e0e0; /* Light gray for disabled state */
+    border: 1px solid #e0e0e0;
+    cursor: not-allowed;
+}
+
+/* Map Button Styles */
+#map {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+#map button {
+    background-color: #c1e1c1; /* Soft pastel green */
+    border: none;
+    color: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 1rem;
+}
+
+#map button:hover {
+    background-color: #a3d5a3; /* Slightly darker green */
+    color: #fff;
+}
+
+/* Search Bar Styles */
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+#searchBar {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 300px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#searchBar:focus {
+    border-color: #a0d6f1; /* Matching soft blue */
+}
